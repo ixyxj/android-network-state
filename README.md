@@ -21,7 +21,7 @@ implementation 'com.xyxj.support:network-state:1.0.0'
 ```java
 NetworkManager.get().register(this).delay(0)
 ```
-监听
+第一种广播监听
 ```java
 NetworkManager.get().addObserver(object : OnNetworkChangeListener {
     override fun onDisConnect() {
@@ -33,6 +33,19 @@ NetworkManager.get().addObserver(object : OnNetworkChangeListener {
     }
 
 })
+```
+第二种系统监听
+```java
+NetworkManager.get().registerCompat(this, @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
+    object : ConnectivityManager.NetworkCallback() {
+        override fun onUnavailable() {
+            super.onUnavailable()
+        }
+
+        override fun onAvailable(network: Network?) {
+            super.onAvailable(network)
+        }
+    })
 ```
 
 ### 问题
