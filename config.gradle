@@ -1,0 +1,43 @@
+ext {
+    android =
+            [
+                    //版本号
+                    versionCode      : 1,
+                    versionName      : "1.0.0",
+
+                    //sdk版本
+                    compileSdkVersion: 28,
+                    buildToolsVersion: "28.0.3",
+                    minSdkVersion    : 14,
+                    targetSdkVersion : 28,
+                    supportVersion   : "28.0.0",
+            ]
+
+    jcenter =
+            [
+                    //项目名称
+                    name              : "net-state",
+                    groupId           : "com.xyxj.support",
+                    //项目地址
+                    siteUrl           : "https://github.com/xyxj/android-network-state",
+                    //项目git地址
+                    gitUrl            : "https://github.com/xyxj/android-network-state.git",
+                    //项目描述
+                    description       : "两种模式的网络监听",
+                    //开发者的一些基本信息
+                    authorId          : "xyxj",
+                    authorName        : "xyxj",
+                    authorEmail       : "xyxjun@gmail.com",
+
+                    //开源协议
+                    licenses                   : {
+                        license {
+                            name 'Apache-2.0'
+                            url 'https://opensource.org/licenses/Apache-2.0'
+                        }
+                    },
+                    licenseName                : 'Apache-2.0'
+            ]
+
+
+}

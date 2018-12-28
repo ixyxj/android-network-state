@@ -1,0 +1,9 @@
+apply plugin: 'com.android.library'
+
+apply plugin: 'kotlin-android'
+
+apply from: "bintray.gradle"
+
+dependencies {
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+}
